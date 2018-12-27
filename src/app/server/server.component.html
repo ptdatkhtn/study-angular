@@ -1,0 +1,16 @@
+<button [disabled]="!status123" (click)="changeStatus()">456</button>
+<button disabled={{!status123}} (click)="changeStatus()">456</button>
+<p>{{status123}}</p>
+<p [innerHTML]="status123"></p>
+<input type="text" (input)="onUpdateData($event)" value="test">
+<input type="text" [(ngModel)]="eventName">
+<p>{{ eventName }}</p>
+<p [innerHTML]="eventName"></p>
+<button (click)="increase()">increase</button>
+<p>{{ status456 }}</p>
+<p [innerHTML]="status456"></p>
+<p *ngIf="false; else noServer"> Server was created ! </p>
+<ng-template #noServer> <p> Server was not created ! </p> </ng-template>
+<p *ngFor="let serverName of serverNames">{{serverName}}</p>
+
+
